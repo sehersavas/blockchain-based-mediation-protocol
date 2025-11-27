@@ -61,5 +61,11 @@ Bu proje **Remix IDE** üzerinden tarayıcıda çalıştırılabilir.
 2. **5070 Sayılı Elektronik İmza Kanunu (Md. 4):** Güvenli elektronik imzanın elle atılan imza ile eşdeğerliği.
 
 ---
-**Geliştirici:** [Adını Soyadını Buraya Yaz]
-*Hukuk & Veri Analitiği Yüksek Lisans Öğrencisi*
+## Metodoloji ve AI Kullanımı
+Bu projenin hukuki mimarisi, iş akış şemaları ve çözüm modeli şahsıma aittir. 
+
+Teknik prototipleme aşamasında (Solidity Akıllı Sözleşme kodlarının yazımı ve Python simülasyonu), kod verimliliğini artırmak ve hata ayıklamak amacıyla **Üretken Yapay Zeka (Generative AI)** araçlarından asistan desteği alınmıştır. Proje, insan denetimli (Human-in-the-loop) bir yaklaşımla geliştirilmiştir.
+
+---
+**Geliştirici:** Seher Savaş
+*Avukat & Akdeniz Üniversitesi Veri Analitiği ve Yönetimi Yüksek Lisans Öğrencisi*
