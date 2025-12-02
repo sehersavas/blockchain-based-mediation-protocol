@@ -36,24 +36,43 @@ Bu proje, Türk Hukuku'ndaki arabuluculuk süreçlerinde karşılaşılan "ısla
 ##  Teknoloji Yığını
 
 * **Smart Contract:** Solidity (Ethereum Sanal Makinesi)
-* **Simülasyon:** Python (Mantıksal akış prototipi)
+* **Simülasyon & Arayüz:** Python (Mantıksal akış prototipi) & Streamlit (Kullanıcı dostu web arayüzü) 
 * **Geliştirme Ortamı:** Remix IDE
 * **Kriptografi:** SHA-256 Hashing, ECDSA İmza Mantığı
 
 ---
+## ⚙️ Kurulum ve Test (İki Farklı Yöntem)
 
-## Kurulum ve Test
+Bu projeyi iki farklı katmanda test edebilirsiniz: **Akıllı Sözleşme Mantığı** (Blockchain Katmanı) ve **Kullanıcı Arayüzü Simülasyonu** (Uygulama Katmanı).
 
-Bu proje **Remix IDE** üzerinden tarayıcıda çalıştırılabilir.
+### 1. Yöntem: Akıllı Sözleşme Testi (Remix IDE)
+Projenin Solidity tabanlı blok zinciri mantığının (Backend) Ethereum Sanal Makinesi (EVM) üzerinde çalıştığını doğrulamak için:
 
-1. [Remix Ethereum](https://remix.ethereum.org/) adresine gidin.
-2. `Arabuluculuk.sol` dosyasını yükleyin.
-3. **Compile** ve **Deploy** edin.
-4. `imzaAt` ve `icraBaslat` fonksiyonları ile süreci test edin.
+1. **[Remix Ethereum](https://remix.ethereum.org/)** adresine gidin.
+2. Repodaki `Arabuluculuk.sol` dosyasını sisteme yükleyin.
+3. Sol menüden önce **"Compile"**, ardından **"Deploy"** butonlarına basın.
+4. Açılan fonksiyonlar (`anlasmaOlustur`, `imzaAt`, `icraBaslat`) ile süreci manuel olarak test edin.
 
 ### Test Kanıtı (Proof of Concept)
 ![Remix Test Sonucu](remix_proof.png)
 
+---
+
+### 2. Yöntem: Arayüz Simülasyonu (Streamlit)
+Vatandaş ve arabulucu gözünden kullanıcı deneyimini (UI/UX) ve iş akışını test etmek için:
+
+**Adım 1: Repoyu İndirin**
+```bash
+git clone [https://github.com/sehersavas/blockchain-based-mediation-protocol.git](https://github.com/sehersavas/blockchain-based-mediation-protocol.git)
+cd blockchain-based-mediation-protocol
+
+**Adım 2: Gerekli Kütüphaneleri Yükleyin**
+pip install -r requirements.txt
+
+**Adım 3: Uygulamayı Başlatın**
+streamlit run app.py
+
+Komutu girdikten sonra tarayıcınızda otomatik olarak Dijital Arabuluculuk Proje Simülasyonu Platformu açılacaktır.
 ---
 
 ## Hukuki Dayanaklar
