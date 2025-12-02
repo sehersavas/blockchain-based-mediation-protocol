@@ -65,13 +65,16 @@ Vatandaş ve arabulucu gözünden kullanıcı deneyimini (UI/UX) ve iş akışı
 ```bash
 git clone [https://github.com/sehersavas/blockchain-based-mediation-protocol.git](https://github.com/sehersavas/blockchain-based-mediation-protocol.git)
 cd blockchain-based-mediation-protocol
+```
 
 **Adım 2: Gerekli Kütüphaneleri Yükleyin**
+```
 pip install -r requirements.txt
-
+```
 **Adım 3: Uygulamayı Başlatın**
+```
 streamlit run app.py
-
+```
 Komutu girdikten sonra tarayıcınızda otomatik olarak Dijital Arabuluculuk Proje Simülasyonu Platformu açılacaktır.
 ---
 
