@@ -32,18 +32,20 @@ Bu proje, Türk Hukuku'ndaki arabuluculuk süreçlerinde karşılaşılan "ısla
 | **5** | `icraBaslat(serhKodu)` | **Yarı-Otomatik İcra:** Taşınmaz devri gibi işlemlerde Mahkeme/UYAP onayı ile süreç tetiklenir. |
 
 ---
+## 📂 Dosya Yapısı ve İçerik
 
-##  Teknoloji Yığını
+Bu depo, projenin üç farklı katmanını temsil eden kodları barındırır:
 
-* **Smart Contract:** Solidity (Ethereum Sanal Makinesi)
-* **Simülasyon & Arayüz:** Python (Mantıksal akış prototipi) & Streamlit (Kullanıcı dostu web arayüzü) 
-* **Geliştirme Ortamı:** Remix IDE
-* **Kriptografi:** SHA-256 Hashing, ECDSA İmza Mantığı
+* **`Arabuluculuk1.sol` (Blockchain/Smart Contract):** Ethereum ağında çalışacak olan Solidity tabanlı akıllı sözleşme kodu.
+* **`arabuluculuk_blockchain.ipynb` (Backend/Logic):** Arayüzden bağımsız olarak, projenin arka planındaki kriptografik mantığı, hashleme ve imza süreçlerini saf Python kodu ile gösteren terminal simülasyonu.
+* **`app.py` (Frontend/Arayüz):** Streamlit ile geliştirilmiş, son kullanıcının (Vatandaş/Arabulucu) deneyimleyebileceği web tabanlı simülasyon.
 
 ---
-## ⚙️ Kurulum ve Test (İki Farklı Yöntem)
 
-Bu projeyi iki farklı katmanda test edebilirsiniz: **Akıllı Sözleşme Mantığı** (Blockchain Katmanı) ve **Kullanıcı Arayüzü Simülasyonu** (Uygulama Katmanı).
+---
+## ⚙️ Kurulum ve Test (3 Farklı Yöntem)
+
+Projeyi test etmek için aşağıdaki yöntemlerden birini seçebilirsiniz:
 
 ### 1. Yöntem: Akıllı Sözleşme Testi (Remix IDE)
 Projenin Solidity tabanlı blok zinciri mantığının (Backend) Ethereum Sanal Makinesi (EVM) üzerinde çalıştığını doğrulamak için:
@@ -57,8 +59,17 @@ Projenin Solidity tabanlı blok zinciri mantığının (Backend) Ethereum Sanal 
 ![Remix Test Sonucu](remix_proof.png)
 
 ---
+### Yöntem 2: Konsol Simülasyonu (Saf Python)
+Arayüz olmadan, sadece arka plandaki algoritma mantığını (Backend Logic) incelemek için:
 
-### 2. Yöntem: Arayüz Simülasyonu (Streamlit)
+Terminal veya Komut Satırına şu komutu yazın:
+```bash
+python Simulation.py
+```
+---
+
+---
+### 3. Yöntem: Arayüz Simülasyonu (Streamlit)
 Vatandaş ve arabulucu gözünden kullanıcı deneyimini (UI/UX) ve iş akışını test etmek için:
 
 **Adım 1: Repoyu İndirin**
@@ -76,6 +87,20 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 Komutu girdikten sonra tarayıcınızda otomatik olarak Dijital Arabuluculuk Proje Simülasyonu Platformu açılacaktır.
+
+### 📂 Örnek Belge Çıktıları (Generated Artifacts)
+
+Simülasyon sonucunda sistem tarafından otomatik üretilen resmi görünümlü, zaman damgalı ve QR kodlu tescil belgeleri:
+
+1.  **İmzalanmış Arabuluculuk Tutanağı (Tescil) Belgesi (Şerhsiz - ÖRNEKTİR Damgalı)**
+    * *Belge:* [Dijital_Tescil_Belgesi.html](Dijital_Tescil_Belgesi-5.html) (İndirilebilir)
+    * *Açıklama:* Tarafların imzası tamamlandığında blok zinciri kaydını gösteren ilk belge.
+
+2.  **İcra Şerhli Belge (MAHKEME ONAYLI)**
+    * *Belge:* [Dijital_Tescil_Belgesi_Serhli.html](Dijital_Tescil_Belgesi-6.html) (İndirilebilir)
+    * *Açıklama:* UYAP entegrasyonu sonrası mahkeme kararının ve doğrulama kodunun işlendiği nihai icra belgesi.
+
+![Streamlit Arayüzü](arayuz_ekran_goruntusu.png)
 ---
 
 ## Hukuki Dayanaklar
